@@ -5,12 +5,14 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.MainUrl;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class ParentTest {
     public WebDriver webDriver;
+    public MainUrl mainUrl;
     Logger logger = Logger.getLogger(getClass());
 
     public ParentTest() {
@@ -26,7 +28,7 @@ public class ParentTest {
         webDriver = new ChromeDriver();
         //webDriver = new EdgeDriver();
 
-        //mainUrl = new MainUrl(webDriver);
+        mainUrl = new MainUrl(webDriver);
         // practice = new Practice(webDriver);
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

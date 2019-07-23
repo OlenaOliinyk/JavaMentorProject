@@ -7,6 +7,9 @@ public class MainPageTest  extends ParentTest{
 
     @Test
     public void projectTest(){
-
+        mainUrl.openLoginPage();
+        mainUrl.enterLoginToInput("eleniks@gmail.com");
+        mainUrl.enterPasswordToInput("---");
+        mainUrl.clickOnSubmitButton();
     }
 }
